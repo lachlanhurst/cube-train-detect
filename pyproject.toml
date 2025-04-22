@@ -1,0 +1,24 @@
+[project]
+authors = [{name = "Lachlan Hurst", email = "lachlan.hurst@gmail.com"}]
+name = "cube-train-detect"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = [
+    "click>=8.1.8,<9",
+    "tensorboard>=2.19.0,<3",
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["win-64", "osx-arm64", "linux-64"]
+
+[tool.pixi.pypi-dependencies]
+cube_train_detect = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+main = { cmd = "python src/cube_train_detect/main.py" }
+tensorboard = { cmd = "tensorboard --logdir=logs" }
