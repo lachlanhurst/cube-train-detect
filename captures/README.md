@@ -1,0 +1,1 @@
+Images captured by the `capture` process will be saved to this folder.

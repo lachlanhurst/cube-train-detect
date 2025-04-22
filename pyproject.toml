@@ -6,6 +6,7 @@ version = "0.1.0"
 dependencies = [
     "click>=8.1.8,<9",
     "tensorboard>=2.19.0,<3",
+    "opencv-python>=4.11.0.86,<5",
 ]
 
 [build-system]
