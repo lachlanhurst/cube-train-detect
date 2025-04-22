@@ -8,6 +8,7 @@ dependencies = [
     "tensorboard>=2.19.0,<3",
     "opencv-python>=4.11.0.86,<5",
     "ultralytics>=8.3.113,<9",
+    "standard-imghdr>=3.13.0,<4",
 ]
 
 [build-system]
@@ -23,4 +24,4 @@ cube_train_detect = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 main = { cmd = "python src/cube_train_detect/main.py" }
-tensorboard = { cmd = "tensorboard --logdir=logs" }
+tensorboard = { cmd = "tensorboard --logdir=runs/" }
