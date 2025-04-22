@@ -7,6 +7,7 @@ dependencies = [
     "click>=8.1.8,<9",
     "tensorboard>=2.19.0,<3",
     "opencv-python>=4.11.0.86,<5",
+    "ultralytics>=8.3.113,<9",
 ]
 
 [build-system]
