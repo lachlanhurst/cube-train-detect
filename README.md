@@ -17,8 +17,8 @@ This project uses the [Pixi](https://pixi.sh/) package management tool, you will
 
 Clone the repo
 
-    git clone https://github.com/lachlanhurst/so100-mujoco-rl.git
-    cd so100-mujoco-rl
+    git clone https://github.com/lachlanhurst/cube-train-detect.git
+    cd cube-train-detect
 
 Install dependencies
 
