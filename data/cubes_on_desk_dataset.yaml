@@ -1,0 +1,9 @@
+# Train/val/test sets as 1) dir: path/to/imgs
+path: "." # dataset root dir
+train: "images/train" # train folder (relative to 'path')
+val: "images/val" # validation folder (relative to 'path')
+test: # test folder (optional)
+
+# Classes list
+names:
+    0: cube
