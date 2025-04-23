@@ -89,7 +89,7 @@ def train(epochs: int, model_name: str, device: str, data: str):
 @click.option('-r', '--rotate', is_flag=True, help="Rotate the web camera 90 degrees (default: False)")
 @click.option('-s', '--source', default=0, type=int, help="Web camera source (default: 0)")
 @click.option('-mp', '--model-path', required=True, type=str, help="Full path to the trained model (weights *.pt file)")
-def capture(rotate: bool, source: int, model_path: str):
+def detect(rotate: bool, source: int, model_path: str):
     import cv2
     from ultralytics import YOLO
 
@@ -156,6 +156,7 @@ def cli():
 
 cli.add_command(capture)
 cli.add_command(train)
+cli.add_command(detect)
 
 
 if __name__ == '__main__':
