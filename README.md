@@ -43,7 +43,7 @@ There's a full labelled dataset in the `./data` folder. If you'd like to generat
 
 Run the following command to start the training process. It assumed labelled dataset is the one included in `./data`, but this can be overriden via command line args (refer `pixi run main capture --help`)
 
-    pixi run main capture
+    pixi run main train --device mps -d data/cubes_on_desk_dataset.yaml
 
 In a separate terminal tensorboard can be used to monitor progress
 
