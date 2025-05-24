@@ -89,7 +89,8 @@ def train(epochs: int, model_name: str, device: str, data: str):
 @click.option('-r', '--rotate', is_flag=True, help="Rotate the web camera 90 degrees (default: False)")
 @click.option('-s', '--source', default=0, type=int, help="Web camera source (default: 0)")
 @click.option('-mp', '--model-path', required=True, type=str, help="Full path to the trained model (weights *.pt file)")
-def detect(rotate: bool, source: int, model_path: str):
+@click.option('--device', default='cpu', type=str, help="Device to use for training (default: cpu)")
+def detect(rotate: bool, source: int, model_path: str, device: str):
     import cv2
     from ultralytics import YOLO
 
@@ -121,7 +122,7 @@ def detect(rotate: bool, source: int, model_path: str):
             rotated_frame = frame
 
         # Run inference using the YOLO model
-        results = model(rotated_frame)
+        results = model(rotated_frame, device=device)
 
         # Draw bounding boxes and labels on the frame
         for result in results:
